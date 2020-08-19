@@ -11,8 +11,8 @@ GPIO.setmode(GPIO.BCM) # Uses the BCM pin definitions
 
 ##### Names for BCM GPIO pins
 POWER = 14 	# Power LED
-INC = 15 	# "Increase" button
-DEC = 18 	# "Decrease" button
+INC = 15 	# Increase delay
+DEC = 18 	# Decrease delay
 ZCROSS = 23	# Zero crossing input pin
 TRIG = 24	# Triac trigger output pin
 
