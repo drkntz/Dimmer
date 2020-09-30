@@ -874,8 +874,6 @@ Wire Wire Line
 	2800 6950 2800 6850
 Wire Wire Line
 	2800 6850 1550 6850
-Text Notes 3650 6650 0    50   ~ 0
-Note: Verify which connection is Increase and \nwhich is Decrease before making cable. I guessed\nhere and they may be reversed. The reversal can\nalso be done in software.
 Wire Wire Line
 	1550 7250 1950 7250
 Wire Wire Line
@@ -904,4 +902,6 @@ NoConn ~ 3250 6850
 NoConn ~ 3250 7350
 Text Notes 1600 6400 0    50   ~ 0
 Pi interface cable. MTA .100 connectors.
+Text Notes 4050 4650 0    50   ~ 0
+Note: Increase and decrease\nare swapped from the software.\nThis is because the software function\n"decrease" decreases the delay \nbetween zcross and triac firing,\ntherefore "increasing" the output
 $EndSCHEMATC

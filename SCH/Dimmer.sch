@@ -186,8 +186,6 @@ F 3 "~" H 7200 1900 50  0001 C CNN
 $EndComp
 Text GLabel 7200 1450 2    50   Input ~ 0
 zcross
-Text GLabel 5200 2900 2    50   Input ~ 0
-trigger
 $Comp
 L Connector:TestPoint_2Pole TP1
 U 1 1 5F258517
@@ -399,7 +397,7 @@ Wire Wire Line
 Wire Wire Line
 	2250 1950 2850 1950
 Connection ~ 2250 1850
-Text Notes 4800 2200 0    50   ~ 0
+Text Notes 4700 2600 0    50   ~ 0
 Note: check the footprint of the H11\nand the NPN before getting too far
 $Comp
 L Triac_Thyristor:BT136-500 Q1
@@ -787,53 +785,6 @@ Pull up resistors -->\nnot necessary if\nusing Pi's internal \npull up
 Wire Wire Line
 	2450 4700 2450 4500
 $Comp
-L Device:R R?
-U 1 1 5F49F503
-P 5050 2900
-F 0 "R?" V 4843 2900 50  0000 C CNN
-F 1 "10k" V 4934 2900 50  0000 C CNN
-F 2 "" V 4980 2900 50  0001 C CNN
-F 3 "~" H 5050 2900 50  0001 C CNN
-	1    5050 2900
-	0    1    1    0   
-$EndComp
-$Comp
-L Transistor_BJT:2N3904 Q?
-U 1 1 5F4A0172
-P 4700 2900
-F 0 "Q?" H 4891 2946 50  0000 L CNN
-F 1 "2N3904" H 4891 2855 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4900 2825 50  0001 L CIN
-F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 4700 2900 50  0001 L CNN
-	1    4700 2900
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5F4ACCEA
-P 4600 2550
-F 0 "R?" H 4670 2596 50  0000 L CNN
-F 1 "10k" H 4670 2505 50  0000 L CNN
-F 2 "" V 4530 2550 50  0001 C CNN
-F 3 "~" H 4600 2550 50  0001 C CNN
-	1    4600 2550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4600 3100 4000 3100
-Connection ~ 4000 3100
-$Comp
-L power:+5V #PWR?
-U 1 1 5F4B2C88
-P 4600 2400
-F 0 "#PWR?" H 4600 2250 50  0001 C CNN
-F 1 "+5V" H 4615 2573 50  0000 C CNN
-F 2 "" H 4600 2400 50  0001 C CNN
-F 3 "" H 4600 2400 50  0001 C CNN
-	1    4600 2400
-	-1   0    0    -1  
-$EndComp
-$Comp
 L Connector_Generic:Conn_01x07 J?
 U 1 1 5F4B9853
 P 1350 7150
@@ -904,4 +855,69 @@ Text Notes 1600 6400 0    50   ~ 0
 Pi interface cable. MTA .100 connectors.
 Text Notes 4050 4650 0    50   ~ 0
 Note: Increase and decrease\nare swapped from the software.\nThis is because the software function\n"decrease" decreases the delay \nbetween zcross and triac firing,\ntherefore "increasing" the output
+$Comp
+L power:+5V #PWR?
+U 1 1 5F4B2C88
+P 4550 2800
+F 0 "#PWR?" H 4550 2650 50  0001 C CNN
+F 1 "+5V" H 4565 2973 50  0000 C CNN
+F 2 "" H 4550 2800 50  0001 C CNN
+F 3 "" H 4550 2800 50  0001 C CNN
+	1    4550 2800
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F4ACCEA
+P 4550 2950
+F 0 "R?" H 4620 2996 50  0000 L CNN
+F 1 "10k" H 4620 2905 50  0000 L CNN
+F 2 "" V 4480 2950 50  0001 C CNN
+F 3 "~" H 4550 2950 50  0001 C CNN
+	1    4550 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F49F503
+P 4900 3300
+F 0 "R?" V 4693 3300 50  0000 C CNN
+F 1 "10k" V 4784 3300 50  0000 C CNN
+F 2 "" V 4830 3300 50  0001 C CNN
+F 3 "~" H 4900 3300 50  0001 C CNN
+	1    4900 3300
+	0    1    1    0   
+$EndComp
+Text GLabel 5050 3300 2    50   Input ~ 0
+trigger
+$Comp
+L power:GND #PWR?
+U 1 1 5F4FC040
+P 4000 3500
+F 0 "#PWR?" H 4000 3250 50  0001 C CNN
+F 1 "GND" H 4005 3327 50  0000 C CNN
+F 2 "" H 4000 3500 50  0001 C CNN
+F 3 "" H 4000 3500 50  0001 C CNN
+	1    4000 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 3100 4550 3300
+Wire Wire Line
+	4550 3300 4750 3300
+Wire Wire Line
+	4300 3300 4550 3300
+Connection ~ 4550 3300
+$Comp
+L Device:Q_PNP_BCE Q?
+U 1 1 5F514AFA
+P 4100 3300
+F 0 "Q?" H 4291 3254 50  0000 L CNN
+F 1 "2n3702" H 4291 3345 50  0000 L CNN
+F 2 "" H 4300 3400 50  0001 C CNN
+F 3 "~" H 4100 3300 50  0001 C CNN
+	1    4100 3300
+	-1   0    0    1   
+$EndComp
+Connection ~ 4000 3100
 $EndSCHEMATC
