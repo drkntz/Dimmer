@@ -1,3 +1,0 @@
-This is not the 479 board. That is contained in projects/479. This is a proof of concept that kinda expanded
-into a raspberry pi peripheral project.
-ZM 18 Aug 2020
