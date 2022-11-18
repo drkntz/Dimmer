@@ -1,7 +1,7 @@
 # Dimmer
-A peripheral for microprocessor control of high voltage AC.
+A peripheral for microprocessor control of 120V AC.
 
-This project originally started as a proof of concept for an AC motor controller, but can be used for many projects involving variable duty cycle AC control. It supports operation for low current (<5A) AC driving as a low-side switch. 
+This project originally started in 2020 as a proof of concept for an AC motor controller, but can be used for many projects involving variable duty cycle AC control. It supports operation for low current (<5A) AC driving as a low-side switch. 
 
 The original board included both an AC triac control and a 5V non-isolated power supply (linkswitch LNK3206). This unit was meant for use in situations where the device is fully enclosed in an insulated housing. However, if fully isolated operation is desired, the Dimmer may be used with an external 5V power supply, as it contains optically isolated triac drive and zero-crossing detection circuits.
 
